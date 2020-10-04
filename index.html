@@ -6,11 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class=" container">
+        <div class="jumbotron">
+            <h1 class="display-3">Super Secret Password Generator</h1>
+            <p class="lead">This system is state-of-the-art!</p>
+            <hr class="my-4">
+            <p>Instructions on items to choose what chars they would like to include</p>
+            <hr class="my-4">
+            <div class="btn-group-toggle" data-toggle="buttons">
+                <button class="btn btn-secondary active upperCase"> <!--.upperCase-->
+                  <input type="checkbox" checked="checked"> UpperCase
+                </button>
+                <button class="btn btn-secondary active lowerCase"><!--.lowerCase-->
+                    <input type="checkbox" checked="checked"> LowerCase
+                  </button>
+                <button class="btn btn-secondary active symbols"><!--.symbols-->
+                    <input type="checkbox" checked="checked"> Symbols
+                  </button>
+                <button class="btn btn-secondary active numbers"><!--.numbers-->
+                    <input type="checkbox" checked="checked"> Numbers
+                  </button>
+            </div>
+            <br>
+            <input type="range" min="0" max="50" name="slider" id="slider">
+            <div id="length"></div>
+            <br>
+            <hr class="my-4">
+            <p class="lead">
+                <a type="button" class="btn btn-primary btn-lg" id="generatePW" onclick="myFunction">Generate Password</a>
+            </p>
+            <p id="displayPW">here</p>
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+<!--
+
+    
         <header>
             <h1>Password Generator</h1>
         </header>
@@ -19,14 +58,17 @@
                 <h2>Generate a Password</h2>
             </div>
             <div class="card-body">
-                <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+                <textarea readonly placeholder="Your Secure password" aria-label="Generated password">
+                </textarea>
+                <p id="passwd"></p>
             </div>
             <div class="card-footer">
-                <button id="generate" class="btn">Generate Password</button>
+
+                <button type="button" id="password" onclick="myFunction()">Generate Password
+                </button>
             </div>
         </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+-->
+
 
 </html>
