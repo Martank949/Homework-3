@@ -19,24 +19,24 @@
 
 //generate
 function generate() {
-    //set password length/complexity with the slide bar
-    let complexity = document.getElementById("slider").value;
+    //1-set password length/complexity with the slide bar
+    let charCount = document.getElementById("slider").value;
 
-    //All 4 character types included into 1 value
+    //2-All 4 character types included into 1 value
     let values = "ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
 
     let password = "";
 
-    //create for loop to choose random characters, need to break this apart into 4 different 
-    for (var i = 0; i <= complexity; i++) {
+    //3-create for loop to choose random characters, need to break this apart into 4 different 
+    for (var i = 0; i <= charCount; i++) {
         password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
     }
 
-    //prints password in password history 
-    document.getElementById("displayPW").value = password;
+    //4-prints password in password history 
+    document.getElementById("displayPW").innerHTML = password;
 
-    //add password to password history and places new one on top and pushes old PW down
-    document.getElementById("lastPass").innerHTML += password;
+    //5-add password to password history and places new one on top and pushes old PW down
+    document.getElementById("lastPass").innerHTML += password + "<br /> ";
 
 
 }
