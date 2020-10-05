@@ -92,16 +92,15 @@
 
 
         function myFunction() {
-            /* Get the text field */
+            //text field
             var copyText = document.getElementById("genPassword");
 
             //5-add password to password history and places new one on top and pushes old PW down
             //document.getElementById("lastPass").innerHTML = myInput
             //document.getElementById("lastPass").innerHTML += myInput + "<br /> ";
 
-            /* Copy the text inside the text field */
-            document.execCommand("copy");
 
-            /* Alert the copied text */
+
+            //alert and copy 
             alert("Copied to Clipboard");
         }
