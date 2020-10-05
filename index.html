@@ -11,67 +11,75 @@
 </head>
 
 <body>
-    <div class=" container">
+    <div class="container">
         <div class="jumbotron">
-            <h1 class="display-3">Super Secret Password Generator</h1>
-            <p class="lead">This system is state-of-the-art!</p>
-            <hr class="my-4">
-            <p>Instructions on items to choose what chars they would like to include</p>
-            <hr class="my-4">
-            <div class="btn-group-toggle" data-toggle="buttons">
-                <button class="btn btn-secondary active upperCase"> <!--.upperCase-->
-                  <input type="checkbox" checked="checked"> UpperCase
-                </button>
-                <button class="btn btn-secondary active lowerCase"><!--.lowerCase-->
-                    <input type="checkbox" checked="checked"> LowerCase
-                  </button>
-                <button class="btn btn-secondary active symbols"><!--.symbols-->
-                    <input type="checkbox" checked="checked"> Symbols
-                  </button>
-                <button class="btn btn-secondary active numbers"><!--.numbers-->
-                    <input type="checkbox" checked="checked"> Numbers
-                  </button>
+            <div class="question-container">
+                <div class="question-modal">
+                    <h1 class="display-3">Password Generator</h1>
+                    <p class="lead">This system is state-of-the-art!</p>
+                    <hr class="my-4">
+                    <h4>Apply any of the boxes below</h4>
+                    <br>
+                    <div class="checks">
+                        <label class="label">UpperCase :</label>
+                        <input type="checkbox" id="upCase" checked class="val"><br>
+                        <span class="custom-checkbox"></span>
+                    </div>
+                    <div class="checks">
+                        <label class="label">LowerCase :</label>
+                        <input type="checkbox" id="lowCase" checked class="val"><br>
+                        <span class="custom-checkbox"></span>
+                    </div>
+                    <div class="checks">
+                        <label class="label">Numbers :</label>
+                        <input type="checkbox" id="num" checked class="val"><br>
+                        <span class="custom-checkbox"></span>
+                    </div>
+                    <div class="checks">
+                        <label class="label">Symbols :</label>
+                        <input type="checkbox" id="sym" checked class="val"><br>
+                        <span class="custom-checkbox"></span>
+                    </div>
+                    <!--Slide Button-->
+                    <br>
+                    <h4>Number of Characters</h4>
+                    <br>
+                    <div class="length-field">
+                        <input type="range" min="8" max="48" value="8" name="Range Slider" id="charCount">
+                        <div id="charCount"></div>
+                        <p>8 - 48</p>
+                    </div>
+                    <!--END of Slide Button-->
+                    <hr class="my-4">
+                    <h4>Click Below to Generate Password</h4>
+                    <br>
+                    <div class="lead">
+                        <a type="button" class="btn btn-primary btn-lg" id="generatePass">Generate Password</a>
+                    </div>
+                    <hr class="my-4">
+                </div>
             </div>
-            <br>
-            <input type="range" min="0" max="50" name="slider" id="slider">
-            <div id="length"></div>
-            <br>
-            <hr class="my-4">
-            <p class="lead">
-                <a type="button" class="btn btn-primary btn-lg" id="generatePW" onclick="generate()">Generate Password</a>
-            </p>
-            <div id="displayPW"></div>
-            <hr class="my-4">
-            <h1>Password History</h1>
-            <div id="lastPass"></div>
+            <div class="question-container">
+                <div class="answer-modal">
+                    <h4>Here is your generated password</h4>
+                    <br>
+                    <input type="text" class="answer-field" id="genPassword">
+                    <br>
+                    <hr class="my-4">
+                    <h4>Password History</h4>
+                    <p type="text" id="genPassword"></p>
+                    <hr class="my-4">
+                    <h4>Click Below to Copy and Paste Password</h4>
+                    <br>
+                    <div class="lead">
+                        <a type="button" class="btn btn-primary btn-lg" onClick="myFunction() ">Copy Password to Clipboard</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-
     </div>
-    <script src="script.js"></script>
+    <script src="script.js">
+    </script>
 </body>
-<!--
-
-    
-        <header>
-            <h1>Password Generator</h1>
-        </header>
-        <div class="card">
-            <div class="card-header">
-                <h2>Generate a Password</h2>
-            </div>
-            <div class="card-body">
-                <textarea readonly placeholder="Your Secure password" aria-label="Generated password">
-                </textarea>
-                <p id="passwd"></p>
-            </div>
-            <div class="card-footer">
-
-                <button type="button" id="password" onclick="myFunction()">Generate Password
-                </button>
-            </div>
-        </div>
--->
-
 
 </html>
